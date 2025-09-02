@@ -1,7 +1,6 @@
 # 🎨 Awesome Icons
 
-A fun project that collects files with (almost) **every programming and tech file extension**.  
-Open this folder in **VS Code / VSCodium** with an icon theme to see a 🤹 **crazy carnival of file logos** 🐍📦⚡🦀📝🍕🤖  
+A fun project that collects files with (almost) **every programming and tech file extension**. Open this folder in **VS Code / VSCodium** with an icon theme to see a 🤹 **crazy carnival of file logos** 🐍📦⚡🦀📝🍕🤖  
 
 ---
 
