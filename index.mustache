@@ -1,0 +1,36 @@
+{{! Welcome message }}
+<h1>{{title}}</h1>
+<p>Version: {{version}}</p>
+<p>Status: {{status}}</p>
+
+{{! User list }}
+<h2>Users</h2>
+<ul>
+  {{#users}}
+    <li>{{name}} ({{age}})</li>
+  {{/users}}
+</ul>
+
+{{! Task list }}
+<h2>Tasks</h2>
+<ol>
+  {{#tasks}}
+    <li>
+      {{desc}} -
+      {{#done}}<span style="color:green">Done</span>{{/done}}
+      {{^done}}<span style="color:red">Pending</span>{{/done}}
+    </li>
+  {{/tasks}}
+</ol>
+
+{{! Settings }}
+<h2>Settings</h2>
+<ul>
+  <li>Theme: {{settings.theme}}</li>
+  <li>Notifications: {{settings.notifications}}</li>
+  <li>Volume: {{settings.volume}}</li>
+</ul>
+
+{{! Footer }}
+<footer>
+  <small>Demo complete!</small>

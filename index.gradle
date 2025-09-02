@@ -1,0 +1,59 @@
+// index.gradle
+// Awesome Icons Demo 🎉
+// A simple Gradle build script
+
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.awesomeicons'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Logging
+    implementation 'ch.qos.logback:logback-classic:1.4.14'
+
+    // JSON library
+    implementation 'com.google.code.gson:gson:2.11.0'
+
+    // Testing
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.0'
+}
+
+application {
+    mainClass = 'com.awesomeicons.App'
+}
+
+// Custom task to print Hello
+task hello {
+    group = "demo"
+    description = "Prints Hello from Gradle"
+    doLast {
+        println "👋 Hello from Gradle build script!"
+    }
+}
+
+// Custom task to show project info
+task projectInfo {
+    group = "demo"
+    description = "Show project information"
+    doLast {
+        println "📦 Project: ${project.name}"
+        println "🏷️ Version: ${project.version}"
+        println "👤 Group: ${project.group}"
+        println "📁 Build Dir: ${buildDir}"
+    }
+}
+
+// Configure test task
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}

@@ -8,9 +8,30 @@ Open this folder in **VS Code / VSCodium** with an icon theme to see a 🤹 **cr
 ## 🤝 Contributing  
 
 Found a file extension that’s missing? 🎯  
+
 1. Create a new file named `index.YOUREXT` (replace `YOUREXT` with the extension, e.g. `index.dart`, `index.exs`).  
-2. Add it to the repo.  
-3. Open a Pull Request ✅  
+2. Add **around 40 lines of demo code** inside the file.  
+   - Example: `index.py` →  
+     ```python
+     def greet(name):
+         return f"Hello, {name}! 🐍"
+
+     class Zoo:
+         def __init__(self):
+             self.animals = ["🦁", "🐘", "🐒", "🐼", "🦊"]
+
+         def show(self):
+             for a in self.animals:
+                 print(f"Welcome {a} to the Icon Circus!")
+
+     if __name__ == "__main__":
+         print(greet("Python"))
+         zoo = Zoo()
+         zoo.show()
+     ```  
+     *(Make it fun — doesn’t need to be useful, just ~40 lines showing syntax of that language/tool.)*  
+3. Add it to the repo.  
+4. Open a Pull Request ✅  
 
 Let’s make this the **biggest file-extension zoo** 🦓🐘🐒 together!  
 

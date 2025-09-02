@@ -1,0 +1,60 @@
+// Variables
+@primary-color: #3498db;
+@secondary-color: #2ecc71;
+@font-stack: 'Segoe UI', Arial, sans-serif;
+@padding: 16px;
+
+// Mixins
+.rounded-corners(@radius) {
+  border-radius: @radius;
+}
+
+// Base styles
+body {
+  font-family: @font-stack;
+  background: lighten(@primary-color, 45%);
+  color: #222;
+  margin: 0;
+  padding: @padding;
+}
+
+h1, h2, h3 {
+  color: @primary-color;
+  margin-bottom: 10px;
+}
+
+button {
+  background: @secondary-color;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  .rounded-corners(6px);
+  cursor: pointer;
+  transition: background 0.2s;
+  &:hover {
+    background: darken(@secondary-color, 10%);
+  }
+}
+
+.card {
+  background: #fff;
+  border: 1px solid lighten(@primary-color, 30%);
+  .rounded-corners(10px);
+  padding: @padding;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+input[type="text"] {
+  border: 1px solid @primary-color;
+  padding: 6px;
+  .rounded-corners(4px);
+  margin-bottom: 10px;
+}
+
+.footer {
+  text-align: center;
+  color: #888;
+  margin-top: 20px;
+  font-size: 14px;
+}
